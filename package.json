@@ -5,13 +5,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "format": "prettier --config .prettierrc.js -w .",
+    "format:check": "prettier --config .prettierrc.js -c .",
     "lint": "next lint",
+    "lint:fix": "eslint src --fix && pnpm format",
+    "lint:strict": "eslint --max-warnings=0 src",
     "postinstall": "prisma generate",
     "run-eslint": "eslint --cache --fix --ignore-path .gitignore --ext .ts,.tsx src",
+    "start": "next start",
     "test": "vitest --run",
     "test:update": "vitest run -u",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit --incremental false"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.4",

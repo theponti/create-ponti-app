@@ -16,7 +16,7 @@ export const prisma =
   });
 
 export function getUserAccount(userId: string) {
-  return prisma.account.findMany({ where: { userId }})
+  return prisma.account.findMany({ where: { userId } });
 }
 
 if (env.NODE_ENV !== "production") {
