@@ -1,5 +1,5 @@
-describe('Header.cy.ts', () => {
-  it('Header', () => {
+describe("Header.cy.ts", () => {
+  it("Header", () => {
     // cy.mount(<Header />);
   });
 });
