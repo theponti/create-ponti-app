@@ -1,7 +1,7 @@
 import type { GetServerSidePropsContext, NextPage } from "next";
+import { signOut, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
-import { signOut, useSession } from "next-auth/react";
 
 import PageWrap from "../../components/PageWrap";
 import { getServerAuthSession } from "../../server/common/get-server-auth-session";
@@ -12,7 +12,7 @@ const Account: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Brainstem</title>
+        <title>Create Ponti App</title>
         <meta
           name="description"
           content="An application to help you manage your mind."

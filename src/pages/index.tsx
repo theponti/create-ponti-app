@@ -7,8 +7,11 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Brainstem</title>
-        <meta name="description" content="An application to help you manage your mind." />
+        <title>Create Ponti App</title>
+        <meta
+          name="description"
+          content="An application to help you manage your mind."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
