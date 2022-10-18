@@ -8,6 +8,19 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     setupFiles: ["./vitest.setup.js"],
+    clearMocks: true,
+    coverage: {
+      clean: true,
+      enabled: true,
+      exclude: [
+        "src/services/constants",
+        "src/styles",
+        "src/testUtils",
+        "src/**/*.spec.{ts,tsx}",
+      ],
+      reporter: ["lcov"],
+      reportsDirectory: "coverage",
+    },
   },
   resolve: {
     alias: {
