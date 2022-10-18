@@ -1,14 +1,15 @@
 # Create Ponti App
 
 ## Features
-- [NextJS](https://nextjs.org/docs/getting-started)
-- [Next-Auth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [TailwindCSS](https://tailwindcss.com)
-- [daisyUI](https://daisyui.com/docs/install/)
-- [tRPC v10](https://trpc.io)
+- ⚡️ [NextJS](https://nextjs.org/docs/getting-started)
+- ⚛️ React 18
+- ✨ TypeScript
+- 🔐 **Auth:** [Next-Auth.js](https://next-auth.js.org)
+- 🗂 **Data:** [Prisma](https://prisma.io)
+- 📞 **API:** [tRPC v10](https://trpc.io)
+- 💅 **Styling:** [TailwindCSS](https://tailwindcss.com) & [daisyUI](https://daisyui.com/docs/install/)
+- 🧪 **Testing:** [Vitest](https://vitest.dev/)
 - [Vercel](https://vercel.com)
-
 ## Principles
 ### 1. Solve Problems
 It's easy to fall in the trap of "adding everything" - we explicitly don't want to do that. 
