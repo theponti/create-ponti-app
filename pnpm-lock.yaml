@@ -19,6 +19,7 @@ specifiers:
   '@vitejs/plugin-react': ^2.1.0
   '@vitest/coverage-c8': ^0.24.3
   autoprefixer: ^10.4.12
+  classnames: ^2.3.2
   cypress: ^10.10.0
   daisyui: ^2.31.0
   eslint: 8.22.0
@@ -62,6 +63,7 @@ dependencies:
   '@trpc/next': 9.27.4_l2t6vv6lmp6aralgreey6zoq4a
   '@trpc/react': 9.27.4_2g6rn7sj2da6xgohvi4oglgmnq
   '@trpc/server': 9.27.4
+  classnames: 2.3.2
   daisyui: 2.31.0_xkowlklhtk6sfvtndbucb3hfiy
   next: 12.3.1_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.14.0_azq6kxkn3od7qdylwkyksrwopy
@@ -1759,6 +1761,10 @@ packages:
   /ci-info/3.5.0:
     resolution: {integrity: sha512-yH4RezKOGlOhxkmhbeNuC4eYZKAUsEaGtBuBzDDP1eFUKiccDWzBABxBfOx31IDwDIXMTxWuwAxUGModvkbuVw==}
     dev: true
+
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
+    dev: false
 
   /clean-stack/2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
