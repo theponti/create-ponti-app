@@ -7,15 +7,12 @@
     "cy:headless": "cypress run",
     "dev": "next dev -H 127.0.0.1 -p 3000",
     "build": "next build",
-    "format": "prettier --config .prettierrc.js -w .",
-    "format:check": "prettier --config .prettierrc.js -c .",
-    "lint": "next lint",
-    "lint:fix": "eslint src --fix && pnpm format",
+    "lint": "eslint --cache --ignore-path .gitignore --ext .ts,.tsx src",
+    "lint:fix": "eslint --cache --fix --ignore-path .gitignore --ext .ts,.tsx src",
     "lint:strict": "eslint --max-warnings=0 src",
     "postinstall": "prisma generate",
     "preview": "next start --port 4173",
     "preview:test": "start-server-and-test preview http://localhost:4173",
-    "run-eslint": "eslint --cache --fix --ignore-path .gitignore --ext .ts,.tsx src",
     "start": "next start",
     "test": "vitest --run",
     "test:ci": "vitest run",
@@ -86,10 +83,9 @@
     "vitest": "0.24.3"
   },
   "lint-staged": {
-    "*": "eslint --fix src",
     "*.css": "stylelint --cache --fix",
     "*.{ts,tsx}": [
-      "eslint --cache --fix",
+      "pnpm lint:fix",
       "vitest related --run --coverage=false"
     ]
   },
