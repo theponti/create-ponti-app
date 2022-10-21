@@ -16,16 +16,19 @@ module.exports = {
     "no-unused-vars": "off",
     "no-console": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/quotes": "off",
     "react/no-unescaped-entities": "off",
 
+    //#region  //*=========== React ===========
     "react/display-name": "off",
     "react/jsx-curly-brace-presence": [
       "warn",
       { props: "never", children: "never" },
     ],
+    //#endregion  //*======== React ===========
 
     //#region  //*=========== Unused Import ===========
-    "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "warn",
     "unused-imports/no-unused-vars": [
       "warn",

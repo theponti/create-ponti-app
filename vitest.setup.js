@@ -1,5 +1,5 @@
-import { vi } from 'vitest';
+import { vi } from "vitest";
 
 // Allow router mocks.
 // eslint-disable-next-line no-undef
-vi.mock('next/router', () => require('next-router-mock'));
+vi.mock("next/router", () => require("next-router-mock"));
