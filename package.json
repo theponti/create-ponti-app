@@ -21,7 +21,7 @@
     "test:ci": "vitest run",
     "test:coverage": "open coverage/lcov-report/index.html",
     "test:e2e": "pnpm preview:test 'cypress open'",
-    "test:e2e:ci": "pnpm build && pnpm preview:test 'npx cypress run --record'",
+    "test:e2e:ci": "pnpm build && pnpm preview:test 'pnpm cypress run --record'",
     "test:e2e:headless": "pnpm preview:test 'cypress run'",
     "test:update": "vitest run -u",
     "test:watch": "vitest",
