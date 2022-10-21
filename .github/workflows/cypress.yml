@@ -1,4 +1,4 @@
-name: Cypress End to End
+name: 🧪 Cypress
 # https://docs.github.com/en/actions/reference/events-that-trigger-workflows
 on: [deployment_status]
 jobs:
