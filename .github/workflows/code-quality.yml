@@ -1,5 +1,6 @@
+# Inspired by:
 # https://github.com/kentcdodds/kentcdodds.com/blob/main/.github/workflows/deployment.yml
-name: Code Check
+name: 🧐 Code Quality
 on:
   push:
     branches:
@@ -7,8 +8,29 @@ on:
   pull_request: {}
 
 jobs:
+  analyze:
+    name: 👩🏻‍💻 CodeQL
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [javascript]
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+
   lint:
-    name: ⬣ ESLint
+    name: ⬣ Lint & ʦ Typecheck
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
@@ -35,61 +57,8 @@ jobs:
       - name: 🔬 Lint
         run: pnpm lint:strict
 
-  typecheck:
-    name: ʦ TypeScript
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.9.1
-
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Set up PNPM
-        uses: pnpm/action-setup@v2.2.1
-        with:
-          version: latest
-          run_install: true
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-          cache: "pnpm"
-
-      - name: 📥 Download deps
-        run: pnpm install
-
       - name: 🔎 Type check
         run: pnpm typecheck
-
-  prettier:
-    name: 💅 Prettier
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.9.1
-
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Set up PNPM
-        uses: pnpm/action-setup@v2.2.1
-        with:
-          version: latest
-          run_install: true
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-          cache: "pnpm"
-
-      - name: 📥 Download deps
-        run: pnpm install
-
-      - name: 🔎 Type check
-        run: pnpm format:check
 
   test:
     name: 🃏 Test
