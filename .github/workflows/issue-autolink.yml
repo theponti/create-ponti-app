@@ -1,4 +1,4 @@
-name: "Issue Autolink"
+name: 🖇 Link Issues
 on:
   pull_request:
     types: [opened]
