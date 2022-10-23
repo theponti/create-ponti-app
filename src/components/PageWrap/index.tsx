@@ -10,7 +10,7 @@ function PageWrap({
 }) {
   return (
     <div
-      className={cx("container mx-auto flex-col pt-14 px-4", {
+      className={cx("container mx-auto flex-col px-4 pt-14", {
         [className || ""]: className,
       })}
     >

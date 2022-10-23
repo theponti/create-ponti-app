@@ -26,9 +26,9 @@ const Account: NextPage = () => {
             Account
           </h1>
 
-          <div className="flex flex-col mb-12">
+          <div className="mb-12 flex flex-col">
             <Image
-              className="avatar rounded-full border-4 border-cyan-200 border-solid"
+              className="avatar rounded-full border-4 border-solid border-cyan-200"
               alt="profile picture"
               src={pictureUrl.replace("_normal", "")}
               width={100}
