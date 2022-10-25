@@ -21,9 +21,7 @@ const Account: NextPage = () => {
   return (
     <main>
       <PageWrap>
-        <h1 className="text-5xl font-extrabold leading-normal text-gray-700 md:text-[3rem]">
-          Account
-        </h1>
+        <h1>Account</h1>
 
         <div className="card bg-neutral-focus shadow-xl md:max-w-sm">
           <div className="card-body place-items-center">
@@ -39,13 +37,11 @@ const Account: NextPage = () => {
         </div>
         <div className="mb-12 flex flex-col"></div>
 
-        <button className="btn" onClick={() => signOut()}>
+        <button className="btn btn-ghost" onClick={() => signOut()}>
           Log out
         </button>
 
-        <div className="divider" />
-
-        <h2 className="mb-4 text-xl text-error">Danger</h2>
+        <div className="divider mt-8" />
 
         {deleteUser.error && (
           <div className="alert alert-error shadow-lg">
@@ -70,7 +66,7 @@ const Account: NextPage = () => {
           </div>
         )}
 
-        <button className="btn" onClick={onDelectAccount}>
+        <button className="btn btn-ghost text-error" onClick={onDelectAccount}>
           Delete account
         </button>
       </PageWrap>
