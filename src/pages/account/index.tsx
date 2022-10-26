@@ -75,9 +75,9 @@ const Account: NextPage = () => {
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  const { props } = await getServerSideProtectedProps(ctx);
+  const response = await getServerSideProtectedProps(ctx);
 
-  return { props };
+  return response;
 }
 
 export default Account;
