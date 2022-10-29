@@ -52,17 +52,24 @@ vercel env add GOOGLE_CLIENT_SECRET <environment>
 
 Vercel creates automatic previews of deployments, which is fantastic! In order to get these previews to work with NextAuth, we have to set up two seperate env variables:
 
-```sh
-vercel env add NEXTAUTH_URL <environment>
-```
+#### Preview
+
+For previews to work with OAuth providers, like Google, you'll
+need to use the static preview domain supplied by Vercel. This URL
+is found on any of your preview deployments. It is the URL without
+the unique hash.
 
 ```sh
-vercel env add NEXTAUTH_URL <environment>
+vercel env add NEXTAUTH_URL preview
 ```
 
-For the `preview` URL, you'll have to use the static one that doesn't change. This is the URL that does not have the unique hash in it and is different from your project's `production` URL.
+#### Production
 
 For the `production` URL, you can find this on the project page.
+
+```sh
+vercel env add NEXTAUTH_URL production
+```
 
 ## Principles
 
