@@ -10,7 +10,7 @@
 - 📞 **API:** [tRPC v10](https://trpc.io)
 - 💅 **Styling:** [TailwindCSS](https://tailwindcss.com) & [daisyUI](https://daisyui.com/docs/install/)
 - 🧪 **Testing:** [Vitest](https://vitest.dev/)
-- [Vercel](https://vercel.com)
+- 🚀 **Deployment:** [Vercel](https://vercel.com)
 
 ## Set up
 
