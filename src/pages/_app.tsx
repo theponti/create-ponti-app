@@ -30,8 +30,12 @@ const MyApp: AppType<{ session: Session | null }> = ({
       <div data-theme="luxury">
         <SessionProvider session={session}>
           <Header />
-          <main>
-            <Component {...pageProps} />
+          <main className="mt-20 grid min-h-screen grid-cols-12">
+            <div className="col-span-10 col-start-2 flex flex-col lg:col-span-8 lg:col-start-3">
+              <div className="flex-1">
+                <Component {...pageProps} />
+              </div>
+            </div>
           </main>
         </SessionProvider>
       </div>

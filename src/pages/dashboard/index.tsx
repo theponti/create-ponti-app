@@ -1,21 +1,18 @@
 import type { GetServerSidePropsContext, NextPage } from "next";
 import { getServerSideProtectedProps } from "src/utils";
 
-import PageWrap from "../../components/PageWrap";
-
 const Dashboard: NextPage = () => {
   return (
-    <PageWrap>
+    <>
       <h1 className="text-5xl font-extrabold leading-normal text-gray-700 md:text-[5rem]">
         Dashboard
       </h1>
-    </PageWrap>
+    </>
   );
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const response = await getServerSideProtectedProps(ctx);
-
   return response;
 }
 
