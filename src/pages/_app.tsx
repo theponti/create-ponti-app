@@ -1,4 +1,3 @@
-// src/pages/_app.tsx
 import { httpBatchLink } from "@trpc/client/links/httpBatchLink";
 import { loggerLink } from "@trpc/client/links/loggerLink";
 import { withTRPC } from "@trpc/next";
@@ -9,6 +8,7 @@ import superjson from "superjson";
 
 import "../styles/globals.css";
 
+import Head from "next/head";
 import Header from "../components/Header";
 import type { AppRouter } from "../server/router";
 
@@ -17,12 +17,29 @@ const MyApp: AppType<{ session: Session | null }> = ({
   pageProps: { session, ...pageProps },
 }) => {
   return (
-    <div data-theme="luxury">
-      <SessionProvider session={session}>
-        <Header />
-        <Component {...pageProps} />
-      </SessionProvider>
-    </div>
+    <>
+      <Head>
+        <title>Create Ponti App</title>
+        <meta
+          name="description"
+          content="An application to help you manage your mind."
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+      </Head>
+      <div data-theme="luxury">
+        <SessionProvider session={session}>
+          <Header />
+          <main className="mt-20 grid min-h-screen grid-cols-12">
+            <div className="col-span-10 col-start-2 flex flex-col lg:col-span-8 lg:col-start-3">
+              <div className="flex-1">
+                <Component {...pageProps} />
+              </div>
+            </div>
+          </main>
+        </SessionProvider>
+      </div>
+    </>
   );
 };
 
